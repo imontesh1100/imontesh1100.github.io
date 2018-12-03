@@ -1,7 +1,4 @@
-// imports
-
 const CACHE    = 'static-v1';
-
 
 const APP_SHELL = [
     '/',

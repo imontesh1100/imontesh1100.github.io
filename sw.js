@@ -4,7 +4,7 @@ const CACHE    = 'static-v1';
 
 
 const APP_SHELL = [
-    // '/',
+    '/',
     'index.html',
     'css/aos.css',
     'css/bootstrap.min.css',
@@ -28,6 +28,8 @@ const APP_SHELL = [
     'styles/main.css',
     'scripts/app.js',
     'scripts/main.js',
+    'https://fonts.googleapis.com/css?family=Montserrat:400,700,200',
+    'https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css'
 ];
 
 

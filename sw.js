@@ -1,19 +1,17 @@
-const CACHE    = 'static-v2';
+const CACHE    = 'static-v1';
 
 const APP_SHELL = [
     '/',
     'index.html',
     'css/aos.css',
     'css/bootstrap.min.css',
-    'js/core/bootstrap.min.js',
-    'js/core/jquery.3.2.1.min.js',
-    'js/core/pooper.min.js',
-    'js/plugins/bootstrap-datepicker.js',
-    'js/plugins/bootstrap-switch.js',
-    'js/plugins/jquery-share.js',
-    'js/plugins/nouislider.min.js',
-    'js/aos.js',
-    'js/now-ui-kit.js',
+    "js/core/jquery.3.2.1.min.js",
+    "js/core/popper.min.js",
+    "js/core/bootstrap.min.js",
+    "js/now-ui-kit.js",
+    "js/aos.js",
+    "scripts/main.js",
+    "scripts/app.js",
     'favicon.ico',
     'images/cc-bg-1.jpg',
     'images/perfil.jpg',
@@ -22,24 +20,17 @@ const APP_SHELL = [
     'images/project-3.jpg',
     'images/project-4.jpg',
     'styles/main.css',
-    'scripts/app.js',
-    'scripts/main.js',
     'https://fonts.googleapis.com/css?family=Montserrat:400,700,200',
     'https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css'
 ];
 
-/*
 
 self.addEventListener('install', e => {
-
-
     const cacheStatic = caches.open(CACHE).then(cache => 
-        cache.addAll( APP_SHELL ));
-
+    cache.addAll( APP_SHELL ));
     e.waitUntil(cacheStatic);
-
+    
 });
-
 
 self.addEventListener('activate', e => {
 
@@ -57,15 +48,18 @@ self.addEventListener('activate', e => {
 
     e.waitUntil( respuesta );
 
-});*/
-
-
+});
 
 
 self.addEventListener( 'fetch', e => {
 
-console.log(e.request);
-    e.respondWith( e );
+    const respuesta = caches.match( e.request ).then( res => {
+
+        if ( res ) {
+            return res;
+        } else {
+            return fetch( e.request );
+        }
+    });
+  e.respondWith( respuesta );
 });
-
-

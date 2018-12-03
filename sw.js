@@ -1,7 +1,6 @@
 const CACHE    = 'static-v2';
 
 const APP_SHELL = [
-    '/',
     'index.html',
     'css/aos.css',
     'css/bootstrap.min.css',

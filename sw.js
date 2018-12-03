@@ -28,7 +28,7 @@ const APP_SHELL = [
     'https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css'
 ];
 
-
+/*
 
 self.addEventListener('install', e => {
 
@@ -57,23 +57,15 @@ self.addEventListener('activate', e => {
 
     e.waitUntil( respuesta );
 
-});
+});*/
 
 
 
 
 self.addEventListener( 'fetch', e => {
 
-
-    const respuesta = caches.match( e.request ).then( res => {
-
-        if ( res ) {
-            return res;
-        } else {
-            return fetch( e.request );
-        }
-    });
-    e.respondWith( respuesta );
+console.log(e.request);
+    e.respondWith( e );
 });
 
 

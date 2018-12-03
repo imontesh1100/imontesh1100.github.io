@@ -14,7 +14,6 @@ const APP_SHELL = [
     'js/aos.js',
     'js/now-ui-kit.js',
     'favicon.ico',
-    'manifest.json',
     'images/cc-bg-1.jpg',
     'images/perfil.jpg',
     'images/project-1.jpg',

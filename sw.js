@@ -1,6 +1,7 @@
 const CACHE    = 'static-v2';
 
 const APP_SHELL = [
+    '/',
     'index.html',
     'css/aos.css',
     'css/bootstrap.min.css',
@@ -35,7 +36,7 @@ self.addEventListener('install', e => {
     const cacheStatic = caches.open(CACHE).then(cache => 
         cache.addAll( APP_SHELL ));
 
-    e.waitUntil( Promise.all([cacheStatic]));
+    e.waitUntil(cacheStatic);
 
 });
 

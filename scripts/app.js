@@ -17,5 +17,3 @@ function isOnline() {
 
 window.addEventListener('online', isOnline );
 window.addEventListener('offline', isOnline );
-
-isOnline();

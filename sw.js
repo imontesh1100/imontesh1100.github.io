@@ -1,4 +1,4 @@
-const CACHE    = 'static-v4';
+const CACHE    = 'static-v5';
 
 const APP_SHELL = [
     '/',

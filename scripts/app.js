@@ -4,8 +4,18 @@ var  swLocation = '/sw.js';
 if ( navigator.serviceWorker ) {
     navigator.serviceWorker.register( swLocation );
 }
-if (navigator.onLine) {
-    console.log("Tienes conexion a internet :)");
-}else{
-    console.log("No tienes conexion a internet :(");
+// Detectar cambios de conexión
+function isOnline() {
+
+    if ( navigator.onLine ) {
+        alert("online");
+    } else{
+        alert("offline");        
+    }
+
 }
+
+window.addEventListener('online', isOnline );
+window.addEventListener('offline', isOnline );
+
+isOnline();

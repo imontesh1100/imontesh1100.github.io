@@ -1,4 +1,4 @@
-const CACHE    = 'static-v5';
+const CACHE    = 'static-v10';
 
 const APP_SHELL = [
     '/',
@@ -26,6 +26,7 @@ const APP_SHELL = [
 
 
 self.addEventListener('install', e => {
+    self.skipWaiting();
     const cacheStatic = caches.open(CACHE).then(cache => 
     cache.addAll( APP_SHELL ));
     e.waitUntil(cacheStatic);

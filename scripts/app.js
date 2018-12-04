@@ -5,7 +5,7 @@ if ( navigator.serviceWorker ) {
     navigator.serviceWorker.register( swLocation );
 }
 if (navigator.onLine) {
-    alert("Tienes conexion a internet :)");
+    console.log("Tienes conexion a internet :)");
 }else{
-    alert("No tienes conexion a internet :(");
+    console.log("No tienes conexion a internet :(");
 }

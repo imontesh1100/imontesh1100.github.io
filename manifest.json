@@ -2,8 +2,8 @@
     "short_name": "Imontes",
     "name": "Perfil Irving Montes ",
     "start_url": "index.html",
-    "background_color": "#e65c00",
-    "theme_color": "#e65c00",
+    "background_color": "#2D3E50",
+    "theme_color": "#2D3E50",
     "display": "standalone",
     "orientation": "portrait",
     "icons": [
